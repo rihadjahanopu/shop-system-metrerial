@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shop System Material
+
+A modern e-commerce landing page built with Next.js and TypeScript. This project showcases a polished product catalog, interactive shopping cart, wishlist sidebar, authentication modal, and responsive design for desktop and mobile.
+
+## Overview
+
+- **Framework:** Next.js 14+ (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS / custom utility classes
+- **Features:** product grid, product modal, cart sidebar, wishlist, auth modal, responsive layout
+- **Data:** local product catalog in `src/data/products.ts`
+
+## Project Structure
+
+- `app/` — Root app structure, global layout, and landing page
+- `src/components/` — UI components such as `Navbar`, `Hero`, `ProductCard`, `CartSidebar`, and `WishlistSidebar`
+- `src/store/useStore.ts` — client-side state management for cart and wishlist
+- `src/types/index.ts` — shared TypeScript interfaces and type definitions
+- `src/data/products.ts` — product metadata and sample product data
+
+### Project Tree
+
+```
+shop-system-metrerial
+├── README.md
+├── next.config.ts
+├── package.json
+├── tsconfig.json
+├── eslint.config.mjs
+├── postcss.config.mjs
+├── public/
+│   └── ...
+└── src/
+    ├── app/
+    │   ├── globals.css
+    │   ├── layout.tsx
+    │   └── page.tsx
+    ├── components/
+    │   ├── AuthModal.tsx
+    │   ├── CartSidebar.tsx
+    │   ├── Footer.tsx
+    │   ├── Hero.tsx
+    │   ├── Navbar.tsx
+    │   ├── ProductCard.tsx
+    │   ├── ProductGrid.tsx
+    │   ├── ProductModal.tsx
+    │   ├── Stats.tsx
+    │   └── WishlistSidebar.tsx
+    ├── data/
+    │   └── products.ts
+    ├── store/
+    │   └── useStore.ts
+    └── types/
+        └── index.ts
+```
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open the app in your browser:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Development Notes
 
-## Learn More
+- Modify the landing experience in `src/app/page.tsx` and `src/components/`.
+- Update product content in `src/data/products.ts`.
+- Use the component library to add new product categories, promotions, or checkout UI.
 
-To learn more about Next.js, take a look at the following resources:
+## Recommended Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `npm run dev` — run the project locally
+- `npm run build` — build for production
+- `npm run start` — start the production server after building
+- `npm run lint` — run ESLint checks
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Live Demo
 
-## Deploy on Vercel
+Explore the project live: [E-Commerce Shop](https://your-live-demo-url.com)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deployment
+
+This app is production-ready for static or server deployment. Popular hosting options:
+
+- Vercel
+- Netlify
+- Render
+- Any Node.js-compatible hosting platform
+
+## Contributing
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Commit changes with clear messages.
+4. Open a pull request.
+
+## License
+
+Use this code freely for portfolio, demo, or internal projects. Update the license section as needed for your organization.
