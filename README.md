@@ -4,7 +4,7 @@ A modern e-commerce landing page built with Next.js and TypeScript. This project
 
 ## Live Demo
 
-Explore the project live: [E-Commerce Shop](https://your-live-demo-url.com)
+Explore the project live: [E-Commerce Shop](https://shop-system-metrerial-jz7by02jx-rihad-jahan-opus-projects.vercel.app/)
 
 ---
 
