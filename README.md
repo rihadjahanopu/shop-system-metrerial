@@ -2,6 +2,12 @@
 
 A modern e-commerce landing page built with Next.js and TypeScript. This project showcases a polished product catalog, interactive shopping cart, wishlist sidebar, authentication modal, and responsive design for desktop and mobile.
 
+## Live Demo
+
+Explore the project live: [E-Commerce Shop](https://your-live-demo-url.com)
+
+---
+
 ## Overview
 
 - **Framework:** Next.js 14+ (App Router)
@@ -86,12 +92,6 @@ http://localhost:3000
 - `npm run build` — build for production
 - `npm run start` — start the production server after building
 - `npm run lint` — run ESLint checks
-
-## Live Demo
-
-Explore the project live: [E-Commerce Shop](https://your-live-demo-url.com)
-
----
 
 ## Deployment
 
