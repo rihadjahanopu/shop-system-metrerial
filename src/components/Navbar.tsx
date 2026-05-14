@@ -5,9 +5,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import {
 	Heart,
 	LogOut,
+	Moon,
 	Search,
 	ShoppingBag,
 	ShoppingCart,
+	Sun,
 	User,
 } from "lucide-react";
 import Image from "next/image";
@@ -26,6 +28,8 @@ export default function Navbar() {
 		setCartOpen,
 		setWishlistOpen,
 		setAuthOpen,
+		darkMode,
+		toggleDarkMode,
 	} = useStore();
 
 	const [isSearchFocused, setIsSearchFocused] = useState(false);
@@ -108,6 +112,42 @@ export default function Navbar() {
 								</span>
 							)}
 						</button>
+
+						{/* Dark / Light Mode Toggle */}
+						<motion.button
+							onClick={toggleDarkMode}
+							whileHover={{ scale: 1.1 }}
+							whileTap={{ scale: 0.9 }}
+							className="relative p-2 rounded-xl bg-gray-100 dark:bg-gray-700 text-yellow-500 dark:text-indigo-300 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-300 overflow-hidden"
+							aria-label="Toggle dark mode"
+							id="dark-mode-toggle"
+						>
+							<AnimatePresence mode="wait" initial={false}>
+								{darkMode ? (
+									<motion.span
+										key="moon"
+										initial={{ rotate: -90, opacity: 0, scale: 0.5 }}
+										animate={{ rotate: 0, opacity: 1, scale: 1 }}
+										exit={{ rotate: 90, opacity: 0, scale: 0.5 }}
+										transition={{ duration: 0.25 }}
+										className="block"
+									>
+										<Moon className="w-5 h-5" />
+									</motion.span>
+								) : (
+									<motion.span
+										key="sun"
+										initial={{ rotate: 90, opacity: 0, scale: 0.5 }}
+										animate={{ rotate: 0, opacity: 1, scale: 1 }}
+										exit={{ rotate: -90, opacity: 0, scale: 0.5 }}
+										transition={{ duration: 0.25 }}
+										className="block"
+									>
+										<Sun className="w-5 h-5" />
+									</motion.span>
+								)}
+							</AnimatePresence>
+						</motion.button>
 
 						<div className="h-8 w-px bg-gray-200 dark:bg-gray-700 mx-1 hidden sm:block"></div>
 
